@@ -68,12 +68,14 @@
   },
   {
     "week": "week06",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/DKael/KraftonJungle_Week6_Team5",
+    "owner": "DKael",
+    "visibility": "public",
+    "ref": "main@e0b452d203184e25cd1dba1a907775f3ec9f228c",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week06",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-24"
   },
   {
     "week": "week07",
