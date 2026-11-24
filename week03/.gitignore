@@ -1,0 +1,13 @@
+.vs/
+x64/
+x86/
+build/
+Debug/
+Release/
+*.user
+*.suo
+*.pdb
+*.ilk
+*.obj
+*.exe
+imgui.ini
