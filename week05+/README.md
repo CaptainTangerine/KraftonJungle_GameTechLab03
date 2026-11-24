@@ -135,7 +135,7 @@ RTTI 매크로가 파생 타입의 복사 생성자를 호출해 실제 타입�
 ## 코드 아카이브
 
 ```text
-Week05+/
+week05+/
 ├── README.md
 ├── NOTICE.md
 ├── Docs/
