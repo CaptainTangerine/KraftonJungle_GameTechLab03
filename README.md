@@ -8,7 +8,7 @@
 
 | 주차 | 문서 | 프로젝트 | 원본 저장소 |
 |---|---|---|---|
-| 1주차 | [week01](week01/README.md) | 작성 예정 | 작성 예정 |
+| 1주차 | [week01](week01/README.md) | Watermelon Game | [코드](week01/Source) · [원본](https://github.com/jskim-research/KraftonJungle_Week01_Team4) 🔒 |
 | 2주차 | [week02](week02/README.md) | 작성 예정 | 작성 예정 |
 | 3주차 | [week03](week03/README.md) | 작성 예정 | 작성 예정 |
 | 4주차 | [week04](week04/README.md) | 작성 예정 | 작성 예정 |

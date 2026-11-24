@@ -1,12 +1,14 @@
 [
   {
     "week": "week01",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/jskim-research/KraftonJungle_Week01_Team4",
+    "owner": "jskim-research",
+    "visibility": "private",
+    "ref": "main@bc3146b893bf6bbc88638c8f588f3cd277da3e7f",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week01",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-24"
   },
   {
     "week": "week02",
