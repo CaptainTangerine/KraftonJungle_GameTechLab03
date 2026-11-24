@@ -2,7 +2,7 @@
 
 크래프톤 정글 Game Tech Lab 3기에서 진행한 프로젝트를 주차별로 정리하기 위한 아카이브입니다.
 
-현재 `week01`부터 `week03`까지의 프로젝트 기록을 정리했으며, `week13`까지 이어서 채울 수 있는 문서 구조를 준비했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여와 검증 자료를 구분해 기록합니다.
+현재 `week01`부터 `week04`까지의 프로젝트 기록을 정리했으며, `week13`까지 이어서 채울 수 있는 문서 구조를 준비했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여와 검증 자료를 구분해 기록합니다.
 
 ## 주차별 목차
 
@@ -11,7 +11,7 @@
 | 1주차 | [week01](week01/README.md) | Watermelon Game | [코드](week01/Source) · [원본](https://github.com/jskim-research/KraftonJungle_Week01_Team4) 🔒 |
 | 2주차 | [week02](week02/README.md) | DirectX 11 3D Level Editor | [코드](week02/Week02_Team06) · [원본](https://github.com/CaptainTangerine/Week02_Team06) 🔒 |
 | 3주차 | [week03](week03/README.md) | Text Rendering & Billboard Editor | [코드](week03/Project) · [보존 원본](https://github.com/wwonnn/KraftonJungle_GameTechLab/tree/main/WEEK03) |
-| 4주차 | [week04](week04/README.md) | 작성 예정 | 작성 예정 |
+| 4주차 | [week04](week04/README.md) | Static Mesh & Material Editor | [코드](week04/Project) · [원본](https://github.com/keonwookang0914/W4_Jungle_Team2) |
 | 5주차 | [week05](week05/README.md) | 작성 예정 | 작성 예정 |
 | 6주차 | [week06](week06/README.md) | 작성 예정 | 작성 예정 |
 | 7주차 | [week07](week07/README.md) | 작성 예정 | 작성 예정 |
