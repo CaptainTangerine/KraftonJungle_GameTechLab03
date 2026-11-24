@@ -1,0 +1,16 @@
+.vs/
+Bin/
+Build/
+packages/
+x64/
+x86/
+Debug/
+Release/
+BenchmarkLogs/
+*.user
+*.suo
+*.pdb
+*.ilk
+*.exe
+*.dmp
+imgui.ini

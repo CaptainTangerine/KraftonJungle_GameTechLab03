@@ -46,12 +46,14 @@
   },
   {
     "week": "week05",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/DDing-Ho-Archive/W05_Team8",
+    "owner": "DDing-Ho-Archive",
+    "visibility": "public",
+    "ref": "main@85301116e1574100962866580593088ecda1a29e",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week05",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-24"
   },
   {
     "week": "week06",
