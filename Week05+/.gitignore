@@ -1,0 +1,14 @@
+.vs/
+Bin/
+Build/
+packages/
+x64/
+x86/
+*.user
+*.suo
+*.pdb
+*.ilk
+*.dll
+*.lib
+*.exe
+*.dmp

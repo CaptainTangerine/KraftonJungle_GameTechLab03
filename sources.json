@@ -56,6 +56,17 @@
     "checked_at": "2026-11-24"
   },
   {
+    "week": "week05+",
+    "repository": "https://github.com/CaptainTangerine/KraftonJungle3_Week5Plus_Team8",
+    "owner": "CaptainTangerine",
+    "visibility": "public",
+    "ref": "main@62a7cb9f18c30237ebba45adb63baec431f09e99",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "Week05+",
+    "contribution_commits": [],
+    "checked_at": "2026-11-24"
+  },
+  {
     "week": "week06",
     "repository": null,
     "owner": null,
