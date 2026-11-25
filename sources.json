@@ -91,12 +91,14 @@
   },
   {
     "week": "week08",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/puter2712git/W8_Team6_Engine",
+    "owner": "puter2712git",
+    "visibility": "public",
+    "ref": "main@d440128a6c3379f5cda05b60f4a6ef3f092e10d1",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week08",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-25"
   },
   {
     "week": "week09",
