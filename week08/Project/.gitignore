@@ -462,7 +462,7 @@ NipsEngine/Saves/**
 !NipsEngine/Asset/**/*.meta
 
 NipsEngine/Asset/Mesh/Bin/**
-NipsEngine/Asset/Scene/**
+!NipsEngine/Asset/Scene/**
 
 # Original OBJ content is unavailable from Git LFS; do not track pointers.
 NipsEngine/Asset/Mesh/**/*.obj
