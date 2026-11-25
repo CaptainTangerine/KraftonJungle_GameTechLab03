@@ -2,7 +2,7 @@
 
 크래프톤 정글 Game Tech Lab 3기에서 진행한 프로젝트를 주차별로 정리하기 위한 아카이브입니다.
 
-현재 `week01`부터 `week09`까지의 프로젝트 기록을 정리했으며, `week13`까지 이어서 채울 수 있는 문서 구조를 준비했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여를 구분해 기록합니다.
+현재 `week01`부터 `week10`까지의 프로젝트 기록을 정리했으며, `week13`까지 이어서 채울 수 있는 문서 구조를 준비했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여를 구분해 기록합니다.
 
 ## 주차별 목차
 
@@ -18,7 +18,7 @@
 | 7주차 | [week07](week07/README.md) | Normal Mapping, Uber Shader & Screen-space God Ray | [코드](week07/Project) · 원본 저장소 삭제 |
 | 8주차 | [week08](week08/README.md) | Real-time Shadow Mapping | [코드](week08/Project) · [원본](https://github.com/puter2712git/W8_Team6_Engine) |
 | 9주차 | [week09](week09/README.md) | Drift Salvage 게임잼 | [코드](week09/Project) · [원본](https://github.com/deepBeom/Jungle_Week9_Team4) |
-| 10주차 | [week10](week10/README.md) | 작성 예정 | 작성 예정 |
+| 10주차 | [week10](week10/README.md) | FBX Importer & Skeletal Mesh Preview | [코드](week10/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week10_Team4) |
 | 11주차 | [week11](week11/README.md) | 작성 예정 | 작성 예정 |
 | 12주차 | [week12](week12/README.md) | 작성 예정 | 작성 예정 |
 | 13주차 | [week13](week13/README.md) | 작성 예정 | 작성 예정 |
