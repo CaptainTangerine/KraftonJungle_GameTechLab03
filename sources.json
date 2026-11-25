@@ -102,12 +102,14 @@
   },
   {
     "week": "week09",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/deepBeom/Jungle_Week9_Team4",
+    "owner": "deepBeom",
+    "visibility": "public",
+    "ref": "main@3003056a3f79f611c060219a7f05c4d4326461e3",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week09",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-25"
   },
   {
     "week": "week10",
