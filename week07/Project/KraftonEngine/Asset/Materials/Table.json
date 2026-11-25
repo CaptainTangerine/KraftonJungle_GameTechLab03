@@ -1,0 +1,18 @@
+{
+  "BlendState" : "",
+  "Defines" : ["LIGHTING_MODEL_BRDF"],
+  "DepthStencilState" : "",
+  "Parameters" : {
+
+  },
+  "PathFileName" : "Asset/Materials/Table.json",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/UberLit.hlsl",
+  "Textures" : {
+    "MetallicMap" : "Data/Table/textures/Metallic.png",
+    "RoughnessMap" : "Data/Table/textures/Rughness.png",
+    "g_txColor" : "Data/Table/textures/Albedo.png",
+    "g_txNormal" : "Data/Table/textures/Normal.png"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "BlendState" : "",
+  "Defines" : ["LIGHTING_MODEL_TOON"],
+  "DepthStencilState" : "",
+  "Parameters" : {
+
+  },
+  "PathFileName" : "Asset/Materials/Face.json",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/UberLit.hlsl",
+  "Textures" : {
+    "g_txColor" : "Data/Lumine/Texture/Face.png",
+    "tShadowMask" : "Data/Lumine/Texture/FaceShadowMask.png"
+  }
+}

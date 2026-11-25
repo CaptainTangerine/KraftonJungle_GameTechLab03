@@ -1,0 +1,16 @@
+{
+  "BlendState" : "",
+  "Defines" : ["LIGHTING_MODEL_BRDF"],
+  "DepthStencilState" : "",
+  "Parameters" : {
+
+  },
+  "PathFileName" : "Asset/Materials/Eyes.json",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/UberLit.hlsl",
+  "Textures" : {
+    "g_txColor" : "Data/Lumine/Texture/Hair.png",
+    "tShadowMask" : "Data/Lumine/Texture/HairShadowMask.png"
+  }
+}

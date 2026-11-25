@@ -1,0 +1,15 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "Parameters" : {
+
+  },
+  "PathFileName" : "Asset/Materials/Sniper_rifleNoNormal.json",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/UberLit.hlsl",
+  "Textures": {
+    "DiffuseTexture": "Data/Sniper_rifleNoNormal/textures/Sniper_KSR_29_Col.jpg",
+    "NormalTexture": "Data/Sniper_rifleNoNormal/textures/Sniper_KSR_29_nor.jpg"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "Actors" : [{
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "11",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/R870_mechanism.json"
+          },
+          "Element 1" : {
+            "Path" : "Asset/Materials/R870_Base_WM.json"
+          },
+          "Element 2" : {
+            "Path" : "Asset/Materials/R870_HandGuard_WM.json"
+          },
+          "Element 3" : {
+            "Path" : "Asset/Materials/R870_BarrelMag_B20M4_WM.json"
+          },
+          "Element 4" : {
+            "Path" : "Asset/Materials/R870_GunButt_WM.json"
+          },
+          "Location" : [-6.533031, -0.025692, 4.964813],
+          "Rotation" : [0.000000, 20.631882, 0.000000],
+          "Scale" : [8.000000, 8.000000, 8.000000],
+          "Static Mesh" : "Data/remington-870/remington-870-wingmaster-1978.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "39",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Table.json"
+          },
+          "Location" : [-7.160969, 0.234385, 0.000000],
+          "Rotation" : [0.000000, -90.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Static Mesh" : "Data/Table/table.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "APointLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_PointLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UPointLightComponent",
+        "Properties" : {
+          "Always Show Range" : false,
+          "Attenuation Radius" : 122.000000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 4.650000,
+          "Light Intensity" : 1.000000,
+          "Location" : [-10.970967, 6.635838, 6.621495],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADirectionalLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_DirectionalLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UDirectionalLightComponent",
+        "Properties" : {
+          "Always Show Arrow" : false,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Intensity" : 1.000000,
+          "Location" : [-11.434957, 0.442757, 5.643631],
+          "Rotation" : [69.464355, -45.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AAmbientLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_AmbientLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UAmbientLightComponent",
+        "Properties" : {
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Intensity" : 0.132000,
+          "Location" : [-11.952862, 1.822098, 3.969773],
+          "Rotation" : [0.000000, -5.713287, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "APointLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_PointLight.json"
+              },
+              "Rotation" : [-0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UPointLightComponent",
+        "Properties" : {
+          "Always Show Range" : false,
+          "Attenuation Radius" : 10.000000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 2.000000,
+          "Light Intensity" : 1.000000,
+          "Location" : [-11.943438, -3.294309, 6.493996],
+          "Rotation" : [-0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ASpotLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_SpotLight.json"
+              },
+              "Rotation" : [-0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "USpotLightComponent",
+        "Properties" : {
+          "Always Show Range" : false,
+          "Attenuation Radius" : 6.000000,
+          "Inner Cone Angle" : 0.001000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 0.800000,
+          "Light Intensity" : 37.900002,
+          "Location" : [-7.232677, 0.335891, 8.051908],
+          "Outer Cone Angle" : 37.700001,
+          "Rotation" : [90.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }],
+  "ClassName" : "UWorld",
+  "ContextHandle" : "Default",
+  "ContextName" : "Default",
+  "Name" : "reminton-870",
+  "PerspectiveCamera" : {
+    "FOV" : 1.047198,
+    "FarClip" : 1000.000000,
+    "Location" : [-5.201915, -2.849718, 6.894691],
+    "NearClip" : 0.100000,
+    "Rotation" : [0.000000, 37.400936, 130.659073]
+  },
+  "Primitives" : {
+    "11" : {
+      "Location" : [-6.533031, -0.025692, 4.964813],
+      "ObjStaticMeshAsset" : "Data/remington-870/remington-870-wingmaster-1978.obj",
+      "Rotation" : [0.000000, -0.000000, 20.631882],
+      "Scale" : [8.000000, 8.000000, 8.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "39" : {
+      "Location" : [-7.160969, 0.234385, 0.000000],
+      "ObjStaticMeshAsset" : "Data/Table/table.obj",
+      "Rotation" : [0.000000, -0.000000, -89.999992],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    }
+  },
+  "Version" : 2,
+  "WorldType" : "Editor"
+}

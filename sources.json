@@ -81,10 +81,13 @@
     "week": "week07",
     "repository": null,
     "owner": null,
-    "visibility": null,
-    "ref": null,
+    "visibility": "deleted",
+    "ref": "week07.zip snapshot",
+    "source_artifact": "week07.zip",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week07",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-25"
   },
   {
     "week": "week08",

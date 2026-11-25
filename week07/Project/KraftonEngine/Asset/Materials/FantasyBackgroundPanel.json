@@ -1,0 +1,8 @@
+{
+  "PathFileName" : "Asset/Materials/FantasyBackgroundPanel.json",
+  "ShaderPath" : "Shaders/ShaderBillboard.hlsl",
+  "RenderPass" : "AlphaBlend",
+  "Textures" : {
+    "DiffuseTexture" : "Data/FantasyBackground.jpg"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Parameters" : {
+    "SectionColor" : [1.000000, 1.000000, 1.000000, 1.000000]
+  },
+  "PathFileName" : "Asset/Materials/Harbinger_of_Dawn.json",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/StaticMeshShader.hlsl",
+  "Textures" : {
+    "g_txColor" : "Data/Lumine_Sword/Equip_Sword_Dawn_01_Tex_Diffuse.png"
+  }
+}

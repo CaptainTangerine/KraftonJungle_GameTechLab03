@@ -1,0 +1,8 @@
+{
+  "PathFileName" : "Asset/Materials/Icon_DirectionalLight.json",
+  "ShaderPath" : "Shaders/ShaderBillboard.hlsl",
+  "RenderPass" : "AlphaBlend",
+  "Textures" : {
+    "DiffuseTexture" : "Asset/Editor/Icons/DirectionalLight_256x.png"
+  }
+}

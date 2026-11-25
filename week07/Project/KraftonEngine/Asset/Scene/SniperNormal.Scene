@@ -1,0 +1,140 @@
+{
+  "Actors" : [{
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "36",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Sniper_rifle.json"
+          },
+          "Location" : [-67.099472, 25.320030, 36.366413],
+          "Rotation" : [27.632660, -31.284943, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "38",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Sniper_rifleNoNormal.json"
+          },
+          "Location" : [-69.344719, 26.664858, 37.098045],
+          "Rotation" : [32.061981, -32.401901, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADirectionalLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_DirectionalLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UDirectionalLightComponent",
+        "Properties" : {
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Intensity" : 1.000000,
+          "Location" : [-69.882988, 22.019531, 38.988335],
+          "Rotation" : [159.021759, -54.526703, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "APointLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_PointLight.json"
+              },
+              "Rotation" : [-0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UPointLightComponent",
+        "Properties" : {
+          "Attenuation Radius" : 1000.000000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 8.000000,
+          "Light Intensity" : 1.000000,
+          "Location" : [-65.350677, 33.168682, 35.860653],
+          "Rotation" : [-0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }],
+  "ClassName" : "UWorld",
+  "ContextHandle" : "Default",
+  "ContextName" : "Default",
+  "Name" : "SniperNormal",
+  "PerspectiveCamera" : {
+    "FOV" : 1.047198,
+    "FarClip" : 1000.000000,
+    "Location" : [-64.053963, 25.493507, 41.095161],
+    "NearClip" : 0.100000,
+    "Rotation" : [0.000000, 53.600792, 152.550888]
+  },
+  "Primitives" : {
+    "36" : {
+      "Location" : [-67.099472, 25.320030, 36.366413],
+      "ObjStaticMeshAsset" : "Data/Sniper_rifle/Sniper_rifle_KSR-29.obj",
+      "Rotation" : [0.000000, 27.632660, -31.284939],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "38" : {
+      "Location" : [-69.344719, 26.664858, 37.098045],
+      "ObjStaticMeshAsset" : "Data/Sniper_rifleNoNormal/Sniper_rifleNoNormal_KSR-29.obj",
+      "Rotation" : [-0.000001, 32.061977, -32.401901],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    }
+  },
+  "Version" : 2,
+  "WorldType" : "Editor"
+}

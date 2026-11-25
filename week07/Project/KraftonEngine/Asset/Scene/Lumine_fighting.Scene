@@ -1,0 +1,419 @@
+{
+  "Actors" : [{
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "11",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Eyes.json"
+          },
+          "Element 1" : {
+            "Path" : "Asset/Materials/EyeWhites.json"
+          },
+          "Element 10" : {
+            "Path" : "Asset/Materials/Skirt.json"
+          },
+          "Element 11" : {
+            "Path" : "Asset/Materials/Shoes.json"
+          },
+          "Element 12" : {
+            "Path" : "Asset/Materials/Gloves.json"
+          },
+          "Element 2" : {
+            "Path" : "Asset/Materials/Neck.json"
+          },
+          "Element 3" : {
+            "Path" : "Asset/Materials/Face.json"
+          },
+          "Element 4" : {
+            "Path" : "Asset/Materials/Hair.json"
+          },
+          "Element 5" : {
+            "Path" : "Asset/Materials/Expression.json"
+          },
+          "Element 6" : {
+            "Path" : "Asset/Materials/Skin.json"
+          },
+          "Element 7" : {
+            "Path" : "Asset/Materials/Clothes.json"
+          },
+          "Element 8" : {
+            "Path" : "Asset/Materials/Pants.json"
+          },
+          "Element 9" : {
+            "Path" : "Asset/Materials/BackAccessory.json"
+          },
+          "Location" : [0.000000, 0.000000, 0.000000],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Static Mesh" : "Data/Lumine/LumineModel.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "32",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Neck.json"
+          },
+          "Element 1" : {
+            "Path" : "Asset/Materials/Hair.json"
+          },
+          "Element 10" : {
+            "Path" : "Asset/Materials/EyeWhites.json"
+          },
+          "Element 11" : {
+            "Path" : "Asset/Materials/Face.json"
+          },
+          "Element 12" : {
+            "Path" : "Asset/Materials/Expression.json"
+          },
+          "Element 2" : {
+            "Path" : "Asset/Materials/Skin.json"
+          },
+          "Element 3" : {
+            "Path" : "Asset/Materials/Clothes.json"
+          },
+          "Element 4" : {
+            "Path" : "Asset/Materials/BackAccessory.json"
+          },
+          "Element 5" : {
+            "Path" : "Asset/Materials/Pants.json"
+          },
+          "Element 6" : {
+            "Path" : "Asset/Materials/Skirt.json"
+          },
+          "Element 7" : {
+            "Path" : "Asset/Materials/Shoes.json"
+          },
+          "Element 8" : {
+            "Path" : "Asset/Materials/Gloves.json"
+          },
+          "Element 9" : {
+            "Path" : "Asset/Materials/Eyes.json"
+          },
+          "Location" : [1.047078, 0.000000, 0.000000],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Static Mesh" : "Data/Lumine/Lumine_Praise.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "35",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/wind.json"
+          },
+          "Location" : [5.447142, 0.389775, 0.542263],
+          "Rotation" : [0.000000, 143.438110, 0.000000],
+          "Scale" : [0.600000, 0.600000, 0.600000],
+          "Static Mesh" : "Data/anemo-slime/Anemo Slime.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "40",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Neck.json"
+          },
+          "Element 1" : {
+            "Path" : "Asset/Materials/Hair.json"
+          },
+          "Element 10" : {
+            "Path" : "Asset/Materials/EyeWhites.json"
+          },
+          "Element 11" : {
+            "Path" : "Asset/Materials/Face.json"
+          },
+          "Element 12" : {
+            "Path" : "Asset/Materials/Expression.json"
+          },
+          "Element 2" : {
+            "Path" : "Asset/Materials/Skin.json"
+          },
+          "Element 3" : {
+            "Path" : "Asset/Materials/Clothes.json"
+          },
+          "Element 4" : {
+            "Path" : "Asset/Materials/BackAccessory.json"
+          },
+          "Element 5" : {
+            "Path" : "Asset/Materials/Pants.json"
+          },
+          "Element 6" : {
+            "Path" : "Asset/Materials/Skirt.json"
+          },
+          "Element 7" : {
+            "Path" : "Asset/Materials/Shoes.json"
+          },
+          "Element 8" : {
+            "Path" : "Asset/Materials/Gloves.json"
+          },
+          "Element 9" : {
+            "Path" : "Asset/Materials/Eyes.json"
+          },
+          "Location" : [3.790009, -1.764749, 0.100000],
+          "Rotation" : [0.000000, -38.163361, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "Static Mesh" : "Data/Lumine/LumineBattle.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AStaticMeshActor",
+      "NonSceneComponents" : [],
+      "PrimitiveKey" : "43",
+      "RootComponent" : {
+        "Children" : [],
+        "ClassName" : "UStaticMeshComponent",
+        "Properties" : {
+          "Element 0" : {
+            "Path" : "Asset/Materials/Harbinger_of_Dawn.json"
+          },
+          "Location" : [3.331573, -1.672481, 1.107542],
+          "Rotation" : [0.000000, 18.728165, 0.000000],
+          "Scale" : [0.300000, 0.300000, 0.300000],
+          "Static Mesh" : "Data/Lumine_Sword/Harbinger of dawn.obj",
+          "Visible" : true,
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "AAmbientLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_AmbientLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UAmbientLightComponent",
+        "Properties" : {
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Intensity" : 0.000000,
+          "Location" : [0.981757, 0.000000, 0.000000],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "ADirectionalLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_DirectionalLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UDirectionalLightComponent",
+        "Properties" : {
+          "Always Show Arrow" : false,
+          "Light Color" : [0.940928, 0.920876, 0.857555, 1.000000],
+          "Light Enabled" : true,
+          "Light Intensity" : 0.599000,
+          "Location" : [-1.272332, 0.000000, 0.000000],
+          "Rotation" : [43.545746, -66.584000, 0.000092],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "APointLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_PointLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }],
+        "ClassName" : "UPointLightComponent",
+        "Properties" : {
+          "Always Show Range" : false,
+          "Attenuation Radius" : 10.000000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 3.400000,
+          "Light Intensity" : 0.311000,
+          "Location" : [-0.737067, 0.189462, 1.155829],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }, {
+      "ClassName" : "APointLightActor",
+      "NonSceneComponents" : [],
+      "RootComponent" : {
+        "Children" : [{
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/Icon_PointLight.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 1.000000, 1.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            },
+            "bEditorOnlyComponent" : true,
+            "bHiddenInComponentTree" : true
+          }, {
+            "Children" : [],
+            "ClassName" : "UBillboardComponent",
+            "Properties" : {
+              "Height" : 1.000000,
+              "Location" : [0.000000, 0.000000, 0.000000],
+              "Material" : {
+                "Path" : "Asset/Materials/FantasyBackgroundPanel.json"
+              },
+              "Rotation" : [0.000000, 0.000000, 0.000000],
+              "Scale" : [1.000000, 100.000000, 100.000000],
+              "Visible" : true,
+              "Width" : 1.000000,
+              "bTickEnable" : true
+            }
+          }],
+        "ClassName" : "UPointLightComponent",
+        "Properties" : {
+          "Always Show Range" : false,
+          "Attenuation Radius" : 10.000000,
+          "Light Color" : [1.000000, 1.000000, 1.000000, 1.000000],
+          "Light Enabled" : true,
+          "Light Falloff Exponent" : 2.000000,
+          "Light Intensity" : 1.000000,
+          "Location" : [62.174000, 4.256281, -2.083965],
+          "Rotation" : [0.000000, 0.000000, 0.000000],
+          "Scale" : [1.000000, 1.000000, 1.000000],
+          "bTickEnable" : true
+        }
+      },
+      "bVisible" : true
+    }],
+  "ClassName" : "UWorld",
+  "ContextHandle" : "Default",
+  "ContextName" : "Default",
+  "Name" : "Lumine_fighting",
+  "PerspectiveCamera" : {
+    "FOV" : 1.047198,
+    "FarClip" : 1000.000000,
+    "Location" : [2.223562, -1.191876, 1.292759],
+    "NearClip" : 0.100000,
+    "Rotation" : [0.000000, 4.102035, 2.553421]
+  },
+  "Primitives" : {
+    "11" : {
+      "Location" : [0.000000, 0.000000, 0.000000],
+      "ObjStaticMeshAsset" : "Data/Lumine/LumineModel.obj",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "32" : {
+      "Location" : [1.047078, 0.000000, 0.000000],
+      "ObjStaticMeshAsset" : "Data/Lumine/Lumine_Praise.obj",
+      "Rotation" : [0.000000, -0.000000, 0.000000],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "35" : {
+      "Location" : [5.447142, 0.389775, 0.542263],
+      "ObjStaticMeshAsset" : "Data/anemo-slime/Anemo Slime.obj",
+      "Rotation" : [0.000000, -0.000000, 143.438110],
+      "Scale" : [0.600000, 0.600000, 0.600000],
+      "Type" : "StaticMeshComp"
+    },
+    "40" : {
+      "Location" : [3.790009, -1.764749, 0.100000],
+      "ObjStaticMeshAsset" : "Data/Lumine/LumineBattle.obj",
+      "Rotation" : [0.000000, -0.000000, -38.163357],
+      "Scale" : [1.000000, 1.000000, 1.000000],
+      "Type" : "StaticMeshComp"
+    },
+    "43" : {
+      "Location" : [3.331573, -1.672481, 1.107542],
+      "ObjStaticMeshAsset" : "Data/Lumine_Sword/Harbinger of dawn.obj",
+      "Rotation" : [0.000000, -0.000000, 18.728168],
+      "Scale" : [0.300000, 0.300000, 0.300000],
+      "Type" : "StaticMeshComp"
+    }
+  },
+  "Version" : 2,
+  "WorldType" : "Editor"
+}

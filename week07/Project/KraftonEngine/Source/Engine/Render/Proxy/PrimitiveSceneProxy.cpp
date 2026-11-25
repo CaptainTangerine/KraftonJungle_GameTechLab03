@@ -1,0 +1,73 @@
+﻿#include "Render/Proxy/PrimitiveSceneProxy.h"
+#include "Render/Proxy/FScene.h"
+#include "Component/PrimitiveComponent.h"
+#include "Component/ActorComponent.h"
+#include "GameFramework/AActor.h"
+#include "Render/Resource/ShaderManager.h"
+
+// ============================================================
+// FPrimitiveSceneProxy — 기본 구현
+// ============================================================
+FPrimitiveSceneProxy::FPrimitiveSceneProxy(UPrimitiveComponent* InComponent)
+	: Owner(InComponent)
+{
+	bSupportsOutline = Owner->SupportsOutline();
+}
+
+void FPrimitiveSceneProxy::UpdateTransform()
+{
+	PerObjectConstants = FPerObjectConstants::FromWorldMatrix(Owner->GetWorldMatrix());
+	CachedWorldPos = PerObjectConstants.Model.GetLocation();
+	CachedBounds = Owner->GetWorldBoundingBox();
+	LastLODUpdateFrame = UINT32_MAX;
+	MarkPerObjectCBDirty();
+}
+
+void FPrimitiveSceneProxy::UpdateMaterial()
+{
+	// 기본 PrimitiveComponent는 섹션별 머티리얼이 없음 — 서브클래스에서 오버라이드
+}
+
+void FPrimitiveSceneProxy::UpdateVisibility()
+{
+	bVisible = Owner->IsVisible();
+	if (bVisible)
+	{
+		AActor* OwnerActor = Owner->GetOwner();
+		if (OwnerActor && !OwnerActor->IsVisible())
+			bVisible = false;
+	}
+}
+
+void FPrimitiveSceneProxy::UpdateMesh()
+{
+	MeshBuffer = Owner->GetMeshBuffer();
+	Pass = ERenderPass::Opaque;
+
+	SectionDraws.clear();
+	if (MeshBuffer)
+	{
+		FMeshSectionDraw Draw;
+		Draw.Shader = FShaderManager::Get().GetShader(EShaderType::Primitive);
+		Draw.FirstIndex = 0;
+		Draw.IndexCount = MeshBuffer->GetIndexBuffer().GetIndexCount();
+		Draw.DiffuseSRV = nullptr;
+		Draw.Blend = EBlendState::Opaque;
+		Draw.DepthStencil = EDepthStencilState::Default;
+		Draw.Rasterizer = ERasterizerState::SolidBackCull;
+		SectionDraws.push_back(Draw);
+	}
+}
+
+void FPrimitiveSceneProxy::CollectSelectedVisuals(FScene& Scene) const
+{
+	if (!Owner) return;
+	AActor* Actor = Owner->GetOwner();
+	if (!Actor) return;
+
+	for (UActorComponent* Comp : Actor->GetComponents())
+	{
+		if (Comp)
+			Comp->ContributeSelectedVisuals(Scene);
+	}
+}

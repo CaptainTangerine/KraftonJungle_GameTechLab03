@@ -1,0 +1,18 @@
+{
+  "BlendState" : "",
+  "Defines" : ["LIGHTING_MODEL_BRDF"],
+  "DepthStencilState" : "",
+  "Parameters" : {
+
+  },
+  "PathFileName" : "Asset/Materials/R870_HandGuard_WM.json",
+  "RasterizerState" : "",
+  "RenderPass" : "Opaque",
+  "ShaderPath" : "Shaders/UberLit.hlsl",
+  "Textures" : {
+    "MetallicMap" : "Data/remington-870/Texture/R870_HandGuard_WMDlux_metallic.png",
+    "RoughnessMap" : "Data/remington-870/Texture/R870_HandGuard_WMDlux_roughness.png",
+    "g_txColor" : "Data/remington-870/Texture/R870_HandGuard_WMDlux_albedo.png",
+    "g_txNormal" : "Data/remington-870/Texture/R870_HandGuard_WMDlux_normal.png"
+  }
+}
