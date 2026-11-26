@@ -135,12 +135,14 @@
   },
   {
     "week": "week12",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/CaptainTangerine/Jungle_Week12_Team1",
+    "owner": "CaptainTangerine",
+    "visibility": "public",
+    "ref": "main@fc3e172fcf8a730525d37d8de7efc094f73bc6c4",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week12",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-26"
   },
   {
     "week": "week13",

@@ -6,7 +6,7 @@
 
 - 주제: 애니메이션 시스템과 GPU 스키닝
 - 작업 기간: 2026.05.15. ~ 2026.05.21. (원본 저장소 이력 기준)
-- 참여 인원: 4명 (해당 기간의 비병합 커밋 작성자 기준)
+- 참여 인원: 4명
 - 원본 저장소: [Jungle_Week11_Team7](https://github.com/chodott/Jungle_Week11_Team7)
 - 공개 프로젝트: [Project](Project/) · [KraftonEngine.sln](Project/KraftonEngine.sln)
 

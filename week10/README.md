@@ -6,7 +6,7 @@
 
 - 주제: FBX 에셋 파이프라인과 스켈레탈 메시 편집
 - 작업 기간: 2026.05.08. ~ 2026.05.14. (원본 저장소 이력 기준)
-- 참여 인원: 3명 (해당 기간의 커밋 작성자 기준)
+- 참여 인원: 3명
 - 원본 저장소: [Jungle_Week10_Team4](https://github.com/CaptainTangerine/Jungle_Week10_Team4)
 - 공개 프로젝트: [Project](Project/) · [NipsEngine.sln](Project/NipsEngine.sln)
 
