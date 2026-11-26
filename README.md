@@ -1,8 +1,28 @@
+![크래프톤 정글 게임테크랩 로고](https://raw.githubusercontent.com/nacho2407/jungle-gtl-engine/main/docs/media/jungle_game_tech_lab_logo.png)
+
 # KraftonJungle_GameTechLab03
 
-크래프톤 정글 Game Tech Lab 3기에서 진행한 프로젝트를 주차별로 정리하기 위한 아카이브입니다.
+**[크래프톤 정글 게임테크랩](https://jungle.krafton.com/courses/gametechlab) 3기 · 엔진 제작 실습과 게임잼**
 
-현재 `week01`부터 `week14`까지의 프로젝트 기록을 정리했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여를 구분해 기록합니다.
+2026.03. ~ 2026.06.
+
+C++20과 DirectX 11로 만든 게임 엔진을 매주 새로운 주제에 맞춰 확장한 기록입니다. 3D 레벨 에디터에서 시작해 렌더링, 애니메이션, 파티클, 물리 기능을 구현했고, 게임잼에서는 **Watermelon Game**, **Drift Salvage**, **GOInc**를 제작했습니다.
+
+## 프로젝트 소개
+
+- 게임테크랩의 엔진 제작 실습에서는 매주 팀을 새로 구성해 엔진의 한 부분을 설계하고 구현했습니다. 이 저장소에는 1주차부터 14주차까지의 결과물을 모았습니다.
+- 피킹 최적화와 에디터 도구, 조명·그림자, 스켈레탈 애니메이션, 파티클, PhysX·NvCloth 등 주차별 주제와 실제 게임 제작 과정을 기록했습니다.
+- 각 주차 문서에서 프로젝트의 전체 결과, 개인 기여, 시연 자료와 회고를 볼 수 있습니다.
+
+## 기술 스택
+
+| 영역 | 사용 기술 |
+|---|---|
+| 언어·스크립트 | C++20, HLSL, Lua |
+| 그래픽스 | DirectX 11, DirectX Tool Kit |
+| 개발 환경 | Visual Studio, MSBuild, vcpkg |
+| 에셋·에디터 | Autodesk FBX SDK, Dear ImGui, imgui-node-editor, RmlUi |
+| 게임 기능 | NVIDIA PhysX SDK, NvCloth, FMOD Engine, LuaJIT, sol2, XInput |
 
 ## 주차별 목차
 
@@ -23,10 +43,3 @@
 | 12주차 | [week12](week12/README.md) | Particle System & HDR Bloom | [코드](week12/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week12_Team1) |
 | 13주차 | [week13](week13/README.md) | PhysX & NvCloth | [코드](week13/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week13_Team4) |
 | 14주차 | [week14](week14/README.md) | GOInc 물리 수거 게임 | [코드](week14/Project) · [원본](https://github.com/JHCard7872/Jungle_Week14_Team8) |
-
-## 기록 원칙
-
-- 팀 프로젝트의 전체 결과와 개인 기여를 구분합니다.
-- 원본 저장소의 코드 공개 권한을 확인하고, 공개 가능한 스냅샷만 이 아카이브에서 관리합니다.
-- 개인 기여는 커밋 diff를 내부 분석 근거로 사용하되, 공개 문서에는 개별 커밋 기록을 나열하지 않습니다.
-- 비공개 원본은 공개 가능한 범위만 기록하고 `🔒`로 표시합니다.
