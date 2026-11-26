@@ -1,0 +1,272 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#modal_root {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#modal_root img {
+    display: block;
+    pointer-events: none;
+}
+
+#modal_root.modal_hidden {
+    display: none;
+}
+
+#modal_dim {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    z-index: 10;
+}
+
+#modal_box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -460px;
+    margin-top: -210px;
+    z-index: 20;
+}
+
+#modal_popup_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#modal_content {
+    position: absolute;
+    left: 11%;
+    top: 22%;
+    width: 78%;
+    height: 58%;
+    overflow: visible;
+}
+
+#modal_title {
+    position: absolute;
+    left: 0px;
+    top: -22px;
+    width: 100%;
+    height: 64px;
+}
+
+#modal_message {
+    position: absolute;
+    left: 0px;
+    top: 58px;
+    width: 100%;
+    height: 100px;
+}
+
+/* 제목이 없는 모달(컷씬 스토리/출근 모달)은 비어 있는 제목 자리만큼 문구를 위로 올린다 */
+.modal_no_title #modal_message {
+    top: 14px;
+}
+
+/* 이름 입력 모달은 입력칸과의 간격이 있어 기존 위치를 유지한다 */
+.modal_no_title.modal_with_input #modal_message {
+    top: 54px;
+}
+
+#modal_button_row {
+    position: absolute;
+    left: 0px;
+    top: 150px;
+    width: 100%;
+    height: 104px;
+    z-index: 50;
+}
+
+.modal_button {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 300px;
+    height: 104px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    transform-origin: center center;
+    z-index: 60;
+}
+
+.modal_two_buttons #modal_button_left {
+    left: 50%;
+    margin-left: -330px;
+}
+
+.modal_two_buttons #modal_button_right {
+    left: 50%;
+    margin-left: 30px;
+}
+
+.modal_one_button #modal_button_left {
+    left: 50%;
+    margin-left: -150px;
+}
+
+.modal_one_button #modal_button_right {
+    display: none;
+}
+
+.modal_button:hover {
+    transform: scale(1.06);
+}
+
+.modal_button:active {
+    transform: scale(0.98);
+}
+
+.modal_button_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#modal_root .modal_button_hover {
+    display: none;
+}
+
+#modal_root .modal_button:hover .modal_button_default {
+    display: none;
+}
+
+#modal_root .modal_button:hover .modal_button_hover {
+    display: block;
+}
+
+.modal_button_label {
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 100%;
+    height: 52px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.modal_button.text_only {
+    top: 0px;
+    width: 160px;
+    height: 64px;
+    background-color: transparent;
+}
+
+.modal_button.text_only .modal_button_image {
+    display: none;
+}
+
+.modal_button.text_only .modal_button_label {
+    top: 0px;
+    height: 64px;
+}
+
+.modal_two_buttons #modal_button_left.text_only {
+    left: 50%;
+    margin-left: -190px;
+}
+
+.modal_two_buttons #modal_button_right.text_only {
+    left: 50%;
+    margin-left: 30px;
+}
+
+.modal_one_button #modal_button_left.text_only {
+    left: 50%;
+    margin-left: -80px;
+}
+
+.modal_button.text_only:hover,
+.modal_button.text_only:active {
+    transform: none;
+}
+
+.modal_button.text_only:hover .modal_button_label,
+.modal_button.text_only:active .modal_button_label {
+    color: #00f7ff;
+}
+
+.modal_with_input #modal_content {
+    top: 10%;
+    height: 84%;
+    overflow: visible;
+}
+
+#modal_input_area {
+    position: absolute;
+    left: 0px;
+    top: 106px;
+    width: 100%;
+    height: 116px;
+    display: none;
+}
+
+.modal_with_input #modal_input_area {
+    display: block;
+}
+
+.modal_with_input #modal_message {
+    top: 54px;
+    height: 46px;
+}
+
+.modal_with_input #modal_button_row {
+    top: 232px;
+    height: 104px;
+}
+
+#modal_input_rule {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 26px;
+}
+
+#modal_text_input {
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    width: 380px;
+    height: 52px;
+    margin-left: -206px;
+    padding: 0px 16px;
+}
+
+#modal_input_error {
+    position: absolute;
+    left: 0px;
+    top: 90px;
+    width: 100%;
+    height: 26px;
+}
+
+#modal_root .modal_cursor_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+}

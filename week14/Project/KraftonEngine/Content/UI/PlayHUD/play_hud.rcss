@@ -1,0 +1,551 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+
+    color: #ffffff;
+}
+
+#hud_root {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#hud_root img {
+    display: block;
+    height: auto;
+    pointer-events: none;
+}
+
+/* 종횡비를 이미지(1190:1322≈0.90)에 맞춰야 width/height:100% 이미지가 왜곡·넘침 없이 채워진다.
+   크기를 바꿀 때도 width:height = 1190:1322 비율을 유지하고 MinimapController의 MAP_W/MAP_H를 같이 맞출 것. */
+#hud_minimap_container {
+    position: absolute;
+    left: 24px;
+    top: 20px;
+    width: 225px;
+    height: 250px;
+    overflow: hidden;
+}
+
+/* 2-id 스코프로 #hud_root img(height:auto)를 이긴다 — 정확히 컨테이너 크기로 그려 왜곡 방지.
+   width:height는 반드시 이미지 종횡비(1190:1322)와 같게 유지할 것. */
+#hud_minimap_container #hud_minimap_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 225px;
+    height: 250px;
+}
+
+/* 미니맵 마커 — #hud_minimap_container 스코프로 specificity를 올려 #hud_root img(display:block)를 이긴다.
+   기본 display:none(숨김), 위치/표시는 MinimapController가 SetProperty(인라인)로 제어. */
+#hud_minimap_container .minimap_marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -8px;
+    margin-top: -8px;
+    display: none;
+}
+
+#hud_minimap_container .mm_player {
+    width: 22px;
+    height: 22px;
+    margin-left: -11px;
+    margin-top: -11px;
+}
+
+#hud_minimap_container .mm_portal {
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+/* 미니맵 범례 — 어떤 마커가 뭔지 표시. id 스코프로 #hud_root img(height:auto)를 이긴다. */
+#hud_minimap_legend {
+    position: absolute;
+    left: 26px;
+    top: 278px;
+    width: 172px;
+    height: 128px;
+    background-color: #07131bb4;
+    border-radius: 12px;
+}
+
+/* 행은 absolute + 명시 top(rml 인라인)으로 쌓는다 — relative flow로는 빈 행(자식이 전부 absolute)이 0높이로 접혀 라벨이 겹쳐 보였다. */
+#hud_minimap_legend .legend_row {
+    position: absolute;
+    left: 14px;
+    width: 146px;
+    height: 27px;
+}
+
+#hud_minimap_legend .legend_icon {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+#hud_minimap_legend .legend_label {
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    width: 116px;
+    height: 27px;
+    line-height: 27px;
+
+    font-size: 18px;
+    color: #eafaff;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+#hud_mission_container {
+    position: absolute;
+    left: 0px;
+    top: 430px;
+    display: none;
+    transform-origin: 0% 0%;
+    transform: scale(1.15);
+}
+
+#hud_mission_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#hud_mission_text {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 170px;
+    height: 50px;
+
+}
+
+#hud_mission_reference_image {
+    position: absolute;
+    right: 40px;
+    top: 38px;
+}
+
+#hud_mission_progress_text {
+    position: absolute;
+    left: 40px;
+    bottom: 0px;
+    width: 250px;
+    height: 22px;
+
+}
+
+
+#hud_server_load_container {
+    position: absolute;
+    left: 50%;
+    top: 55px;
+    width: 520px;
+    height: 92px;
+    margin-left: -260px;
+    transform-origin: 50% 0%;
+    transform: scale(1.5);
+}
+
+#hud_server_load_label {
+    position: absolute;
+    left: 0px;
+    top: 58px;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #f2f6f7;
+    font-effect: outline(2px #000000aa);
+}
+
+#hud_server_load_gauge {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 48px;
+}
+
+#hud_server_load_empty {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.hud_server_load_fill {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    opacity: 0;
+}
+
+#hud_server_load_value {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+    line-height: 48px;
+
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-effect: outline(2px #000000cc);
+}
+
+#hud_time_container {
+    position: absolute;
+    right: 28px;
+    top: 20px;
+    transform-origin: 100% 0%;
+    transform: scale(1.2);
+}
+
+#hud_time_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#hud_time_text {
+    position: absolute;
+    left: 40px;
+    top: 33px;
+    width: 150px;
+    height: 42px;
+
+}
+
+#hud_score_container {
+    position: absolute;
+    right: 28px;
+    top: 176px;
+    transform-origin: 100% 0%;
+    transform: scale(1.2);
+}
+
+#hud_score_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#hud_score_text {
+    position: absolute;
+    left: -10px;
+    top: 40px;
+    width: 220px;
+    height: 40px;
+
+}
+
+#hud_crosshair_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+    margin-top: -80px;
+}
+
+#hud_crosshair_collect,
+#hud_crosshair_attack {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 160px;
+    height: 160px;
+    transform-origin: 50% 50%;
+}
+
+#hud_crosshair_attack {
+    display: none;
+}
+
+#hud_target_info_container {
+    position: absolute;
+    left: 43%;
+    top: 37%;
+    width: 350px;
+    height: 194px;
+    margin-left: -250px;
+    margin-top: -180px;
+    display: none;
+    transform-origin: 0% 0%;
+    transform: scale(1.2);
+}
+
+#hud_target_info_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#hud_target_pose_image {
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    width: 90px;
+    height: 90px;
+    border: 2px #25c8ff;
+}
+
+#hud_target_name {
+    position: absolute;
+    left: 160px;
+    top: 50px;
+    width: 200px;
+    height: 24px;
+
+    font-size: 25px;
+    border: 0px;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+#hud_target_score {
+    position: absolute;
+    left: 160px;
+    width: 136px;
+    height: 24px;
+    font-size: 25px;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+#hud_target_score {
+    top: 125px;
+    color: #8cff79;
+
+    font-size: 25px;
+}
+
+#hud_popup_container {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 1000px;
+    height: 124px;
+    margin-left: -500px;
+    margin-top: -62px;
+    display: none;
+    opacity: 0.7;
+    transform-origin: 50% 50%;
+    transform: scale(1.2);
+}
+
+#hud_popup_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.95;
+    width: 100%;
+    height: 100%;
+}
+
+#hud_start_countdown_overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#hud_start_countdown_dim {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.3;
+}
+
+#hud_start_countdown_image {
+    position: absolute;
+    left: 48%;
+    top: 60%;
+    width: 500px;
+    height:  500px;
+    margin-left: -210px;
+    margin-top: -210px;
+}
+
+#hud_gun_status_container {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    width: 520px;
+    height: 176px;
+    transform-origin: 0% 100%;
+    transform: scale(1.0);
+}
+
+#hud_gun_mode_image {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#hud_gun_mode_label {
+    display: none;
+}
+
+#hud_gun_mode_text {
+    display: none;
+}
+
+#hud_gun_energy_text {
+    display: none;
+}
+
+#hud_gun_collect_icon,
+#hud_gun_attack_icon {
+    display: none;
+}
+
+#hud_debug_panel {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    width: 620px;
+    height: 590px;
+    padding: 22px;
+    background-color: #07131be0;
+    border-width: 3px;
+    border-color: #88d7ea;
+    border-radius: 20px;
+    display: none;
+    transform-origin: 100% 100%;
+    transform: scale(1.1);
+}
+
+#hud_debug_title {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    color: #efffff;
+}
+
+.hud_debug_row {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    margin-bottom: 10px;
+}
+
+.hud_debug_label {
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    color: #d8edf5;
+}
+
+.hud_debug_input {
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    width: 360px;
+    height: 52px;
+    padding: 6px 12px;
+    background-color: #122532;
+    border-width: 2px;
+    border-color: #6db5c8;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.hud_debug_select {
+    padding-top: 10px;
+}
+
+.hud_debug_button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 120px;
+    height: 52px;
+    padding: 0px;
+    background-color: #1f6b87;
+    border-width: 2px;
+    border-color: #9fe7f4;
+    border-radius: 10px;
+    color: #ffffff;
+
+    font-size: 18px;
+    text-align: center;
+}
+
+.hud_debug_button:hover {
+    background-color: #2c8fb1;
+}
+
+#hud_gameover_overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#hud_gameover_dim {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.3;
+}
+
+#hud_gameover_banner_clip {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0px;
+    height: 213px;
+    margin-left: -563px;
+    margin-top: -106px;
+    overflow: hidden;
+}
+
+#hud_gameover_banner_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1127px;
+    height: 213px;
+}

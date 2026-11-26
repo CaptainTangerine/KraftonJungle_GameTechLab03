@@ -1,0 +1,935 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+
+}
+
+/* Lua에서 SetProperty("display", ...)로 보이기/숨기기를 제어한다 */
+#page_root {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* 화면 전체를 검은색 30%로 덮는 레이어
+   주의: 이 RCSS는 rgba()/rgb() 함수 문법을 지원하지 않는다 (다른 화면도 전부 8자리 HEX 사용).
+   #RRGGBBAA 에서 AA = 0.30 * 255 ≈ 0x4D */
+#page_dim {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #0000004D;
+    z-index: 10;
+}
+
+/* 우측 상단 Back 버튼: "Back" 텍스트 + 화살표 아이콘, 텍스트는 흰색 */
+#page_back_button {
+    position: absolute;
+    right: 5%;
+    top: 6%;
+    width: 290px;
+    height: 98px;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    transform-origin: center center;
+    z-index: 20;
+}
+
+#page_back_button:hover {
+    transform: scale(1.08);
+}
+
+#page_back_label {
+    position: absolute;
+    right: 96px;
+    top: 22px;
+    font-family: Galmuri;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 54px;
+}
+
+#page_back_icon {
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    width: 84px;
+    height: 84px;
+    pointer-events: none;
+}
+
+#page_body {
+    position: absolute;
+    left: 5%;
+    top: 21%;
+    width: 90%;
+    height: 62%;
+    z-index: 20;
+}
+
+.page_body_section {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* Options: RmlUi의 inline/relative 흐름 차이를 피하려고 전부 절대 좌표로 배치한다 */
+.option_group_label {
+    position: absolute;
+    left: 0px;
+    width: 520px;
+    height: 62px;
+}
+
+#sound_volume_label {
+    top: 180px;
+}
+
+#input_mode_label {
+    top: 274px;
+}
+
+.option_group_label_icon {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    width: 56px;
+    height: 56px;
+}
+
+.option_group_label_text {
+    position: absolute;
+    left: 68px;
+    top: 5px;
+    font-family: Galmuri;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 44px;
+    line-height: 52px;
+}
+
+.option_row {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 76px;
+    background-color: #ffffff30;
+    border-width: 2px;
+    border-color: #ffffff55;
+    border-radius: 14px;
+}
+
+#sfx_volume_row {
+    top: 262px;
+}
+
+#bgm_volume_row {
+    top: 350px;
+}
+
+.option_row_name {
+    position: absolute;
+    left: 36px;
+    top: 18px;
+    font-family: Galmuri;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 42px;
+}
+
+.value_step_button {
+    position: absolute;
+    top: 12px;
+    width: 52px;
+    height: 52px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff22;
+    border-width: 2px;
+    border-color: #ffffffaa;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 34px;
+    text-align: center;
+    line-height: 52px;
+}
+
+.value_step_button:hover {
+    background-color: #ffffff88;
+}
+
+.value_down {
+    right: 220px;
+}
+
+.value_up {
+    right: 36px;
+}
+
+.option_value_text {
+    position: absolute;
+    right: 92px;
+    top: 12px;
+    width: 128px;
+    height: 52px;
+    font-family: Galmuri;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 34px;
+    text-align: center;
+    line-height: 52px;
+}
+
+/* 입력 모드 선택 행: settings_input_* 아이콘을 작게 표시한다 */
+.input_mode_row {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 86px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #00000040;
+    border-radius: 14px;
+    border-width: 2px;
+    border-color: #00000000;
+    text-align: left;
+}
+
+#input_mode_mouse_key {
+    top: 356px;
+}
+
+#input_mode_gamepad {
+    top: 456px;
+}
+
+.input_mode_row:hover {
+    background-color: #ffffff2c;
+}
+
+.input_mode_row.selected {
+    background-color: #ffd9664d;
+    border-color: #ffd966ff;
+}
+
+.input_mode_icon {
+    position: absolute;
+    left: 24px;
+    top: 14px;
+    width: 58px;
+    height: 58px;
+    pointer-events: none;
+}
+
+.input_mode_text {
+    position: absolute;
+    left: 104px;
+    top: 22px;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 44px;
+    pointer-events: none;
+}
+
+/* Controls (플레이 방법) 선택/팝업 레이아웃 */
+#controls_choice_buttons {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 650px;
+    display: block;
+}
+
+/* Pause 화면의 2버튼 UI를 재사용하되, 이 화면에서만 좌/우 배치 */
+.controls_choice_button {
+    position: absolute;
+    top: 50%;
+    margin-top: -52px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    transform-origin: center center;
+}
+
+#controls_tab_game {
+    left: 50%;
+    margin-left: -500px;
+}
+
+#controls_tab_input {
+    left: 50%;
+    margin-left: 60px;
+}
+
+.controls_choice_button:hover {
+    transform: scale(1.06);
+}
+
+.controls_choice_button:active {
+    transform: scale(0.98);
+}
+
+.controls_choice_button_img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+}
+
+.controls_choice_btn_hover {
+    display: none;
+}
+
+.controls_choice_button:hover .controls_choice_btn_default {
+    display: none;
+}
+
+.controls_choice_button:hover .controls_choice_btn_hover {
+    display: block;
+}
+
+.controls_choice_button_label {
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 100%;
+    height: 52px;
+    pointer-events: none;
+}
+
+.controls_body {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 650px;
+    display: none;
+}
+
+/* 입력 장치 선택 버튼 (아이콘 + 텍스트) */
+.controls_device_button {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 76px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #00000060;
+    border-width: 2px;
+    border-color: #ffffff44;
+    border-radius: 12px;
+}
+
+.controls_device_button:hover {
+    background-color: #ffffff20;
+}
+
+/* 두 버튼 가운데 정렬: 각 300px, 간격 40px → 총 640px */
+#controls_device_km {
+    left: 50%;
+    margin-left: -320px;
+}
+
+#controls_device_gp {
+    left: 50%;
+    margin-left: 20px;
+}
+
+.controls_device_icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 56px;
+    height: 56px;
+    pointer-events: none;
+}
+
+.controls_device_label {
+    position: absolute;
+    left: 78px;
+    top: 0px;
+    width: 210px;
+    height: 76px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 76px;
+    pointer-events: none;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+/* how_to_play 계열 이미지는 팝업 본문처럼 중앙 배치하고, 하단에 닫기 버튼을 둔다 */
+.controls_how_to_play {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    display: none;
+}
+
+#controls_image_km {
+    top: 70px;
+    width: 90%;
+    margin-left: -45%;
+}
+
+#controls_image_gp {
+    top: 50px;
+    width: 70%;
+    margin-left: -35%;
+}
+
+#controls_image_process {
+    top: 24px;
+    display: block;
+    width: 82%;
+    margin-left: -41%;
+}
+
+/* 게임 진행 탭 2페이지 텍스트 */
+.controls_game_page {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 560px;
+    display: none;
+    background-color: transparent;
+    border-width: 0px;
+}
+
+.controls_game_bg_img {
+    position: absolute;
+    left: 0px;
+    top: -70px;
+    width: 100%;
+    height: 140%;
+}
+
+.controls_game_title {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    width: 100%;
+    height: 76px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 76px;
+    text-align: center;
+    font-effect: shadow(2px 2px #000000bb);
+}
+
+.controls_game_text {
+    position: absolute;
+    left: 5%;
+    top: 116px;
+    width: 90%;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 72px;
+    text-align: center;
+    font-effect: shadow(2px 2px #000000bb);
+}
+
+.controls_game_text p {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.controls_game_spacer {
+    line-height: 36px;
+}
+
+#controls_game_page_2 .controls_game_text {
+    top: 200px;
+    line-height: 90px;
+}
+
+#controls_game_pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 9%;
+    margin-left: -110px;
+    width: 220px;
+    height: 52px;
+}
+
+.controls_game_nav_button {
+    position: absolute;
+    top: 0px;
+    width: 52px;
+    height: 52px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff22;
+    border-width: 2px;
+    border-color: #ffffffaa;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    line-height: 52px;
+}
+
+.controls_game_nav_button:hover {
+    background-color: #ffffff66;
+}
+
+.controls_game_nav_button:active {
+    background-color: #ffffff88;
+}
+
+#controls_game_prev_button {
+    left: 0px;
+}
+
+#controls_game_next_button {
+    right: 0px;
+}
+
+#controls_game_page_label {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    width: 100px;
+    height: 52px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    line-height: 52px;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+/* 각 body 내부 닫기 버튼 — 우측 하단 고정 */
+.controls_close_button {
+    position: absolute;
+    bottom: -170px;
+    right: -100px;
+    width: 264px;
+    height: 104px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    transform-origin: center center;
+}
+
+.controls_close_button:hover {
+    transform: scale(1.06);
+}
+
+.controls_close_button:active {
+    transform: scale(0.98);
+}
+
+.controls_close_button .horiz_button_image {
+    position: absolute;
+    left: 110px;
+    top: 0px;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.controls_close_button .horiz_button_label {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.controls_close_button .horiz_button_hover {
+    display: none;
+}
+
+.controls_close_button:hover .horiz_button_default {
+    display: none;
+}
+
+.controls_close_button:hover .horiz_button_hover {
+    display: block;
+}
+
+/* 스코어보드/크레딧 공통 카드 */
+.simple_card {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 430px;
+    background-color: #00000040;
+    border-width: 3px;
+    border-color: #ffffff55;
+    border-radius: 20px;
+}
+
+.simple_card_title {
+    display: none;
+}
+
+.simple_line {
+    position: absolute;
+    left: 36px;
+    width: 1400px;
+    height: 52px;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 52px;
+}
+
+
+.credits_card {
+    height: 730px;
+    top: -20px;
+}
+
+#credits_developers_team {
+    left: 0px;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+}
+
+#credits_developers_logo {
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+
+/*
+ * ID 카드 4장 가로 배치
+ * ─────────────────────────────────────────────────
+ * CARD_W = 13%   ← 카드 표시 너비
+ * GAP    =  5%   ← 카드 사이 실제 간격
+ * STRIDE = 18%   ← CARD_W + GAP
+ * START  = 17%   ← 좌우 여백 대칭: (100 - 4×13 - 3×5) / 2 = 16.5 ≈ 17
+ *
+ * left[n] = START + n × STRIDE
+ *
+ * 카드 수·간격 바꿀 때: CARD_W·GAP 조정 → STRIDE 재계산 → START = (100 - 4×CARD_W - 3×GAP) / 2
+ * ─────────────────────────────────────────────────
+ */
+.credits_id_card {
+    position: absolute;
+    top: 150px;
+    width: 13%;   /* CARD_W */
+    height: auto;
+    /* 플립(scale X) 연출이 카드 중심을 기준으로 돌도록 */
+    transform-origin: center center;
+}
+
+#credits_id_card_1 { left: 17%; }   /* START + 0×STRIDE */
+#credits_id_card_2 { left: 35%; }   /* START + 1×STRIDE */
+#credits_id_card_3 { left: 53%; }   /* START + 2×STRIDE */
+#credits_id_card_4 { left: 71%; }   /* START + 3×STRIDE */
+
+#credits_special_thanks {
+    top: 530px;
+    left: 36px;
+    right: 36px;
+    width: auto;
+    text-align: right;
+}
+
+#credits_hint {
+    top: 650px;
+    left: 36px;
+    right: 36px;
+    width: auto;
+    text-align: right;
+    color: #fff2a8;
+}
+
+/* 스코어보드: scoreboard.json에서 읽은 값을 Lua가 각 row에 채운다 */
+.scoreboard_card {
+    height: 650px;
+}
+
+#scoreboard_month_title {
+    position: absolute;
+    left: 0px;
+    top: 18px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+}
+
+#scoreboard_title_logo {
+    display: inline-block;
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+#scoreboard_title_text {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: Galmuri;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 54px;
+    line-height: 70px;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+#score_table {
+    position: absolute;
+    left: 36px;
+    top: 106px;
+    width: 94%;
+    height: 390px;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-color: #000000;
+}
+
+.score_col_line {
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: #000000;
+}
+
+.score_col_line_1 { left: 10%; }
+.score_col_line_2 { left: 34%; }
+.score_col_line_3 { left: 54%; }
+.score_col_line_4 { left: 74%; }
+
+.score_header {
+    position: absolute;
+    top: 0px;
+    height: 54px;
+    background-color: #C60D19FF;
+    color: #ffffff;
+    font-family: YoonGothic;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 54px;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+    border-right-width: 2px;
+    border-right-color: #000000;
+}
+
+.score_row {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 64px;
+    color: #000000;
+    font-family: YoonGothic;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 64px;
+    text-align: center;
+    border-bottom-width: 2px;
+    border-bottom-color: #000000;
+}
+
+#score_row_1 { top: 62px; }
+#score_row_2 { top: 126px; }
+#score_row_3 { top: 190px; }
+#score_row_4 { top: 254px; }
+#score_row_5 { top: 318px; }
+
+.score_rank {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 10%;
+}
+
+.score_name {
+    position: absolute;
+    left: 10%;
+    top: 0px;
+    width: 24%;
+}
+
+.score_count {
+    position: absolute;
+    left: 34%;
+    top: 0px;
+    width: 20%;
+}
+
+.score_value {
+    position: absolute;
+    left: 54%;
+    top: 0px;
+    width: 20%;
+}
+
+.score_date {
+    position: absolute;
+    left: 74%;
+    top: 0px;
+    width: 26%;
+}
+
+#score_empty_text {
+    position: absolute;
+    left: 0px;
+    top: 318px;
+    width: 100%;
+    height: 52px;
+    color: #000000cc;
+    font-family: YoonGothic;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 52px;
+    text-align: center;
+    display: none;
+}
+
+/* 스코어보드 prev/next 페이지 이동 — 5명 단위, Lua가 페이지 번호 갱신 */
+#scoreboard_pagination {
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+    width: 220px;
+    height: 52px;
+}
+
+.scoreboard_nav_button {
+    position: absolute;
+    top: 0px;
+    width: 52px;
+    height: 52px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffffff22;
+    border-width: 2px;
+    border-color: #ffffffaa;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    line-height: 52px;
+}
+
+.scoreboard_nav_button:hover {
+    background-color: #ffffff66;
+}
+
+.scoreboard_nav_button:active {
+    background-color: #ffffff66;
+}
+
+#scoreboard_prev_button {
+    left: 0px;
+}
+
+#scoreboard_next_button {
+    right: 0px;
+}
+
+#scoreboard_page_label {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    width: 100px;
+    height: 52px;
+    color: #ffffff;
+    font-family: Galmuri;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    line-height: 52px;
+    font-effect: shadow(2px 2px #000000aa);
+}
+
+/* 중앙 하단 Confirm 버튼: ui_button(_hover) 사용 */
+.horiz_button {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    margin-left: -220px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    transform-origin: center center;
+    z-index: 20;
+}
+
+.horiz_button:hover {
+    transform: scale(1.06);
+}
+
+.horiz_button:active {
+    transform: scale(0.98);
+}
+
+.horiz_button_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+}
+
+.horiz_button_hover {
+    display: none;
+}
+
+.horiz_button:hover .horiz_button_default {
+    display: none;
+}
+
+.horiz_button:hover .horiz_button_hover {
+    display: block;
+}
+
+.horiz_button_label {
+    position: absolute;
+    left: 0px;
+    top: 36px;
+
+    pointer-events: none;
+}
+
+.submenu_cursor_image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: none;
+    pointer-events: none;
+    z-index: 9999;
+}

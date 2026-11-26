@@ -1,0 +1,396 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+
+    color: #111111;
+}
+
+#result_root {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#result_root img {
+    display: block;
+    pointer-events: none;
+}
+
+#result_background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#result_pre_popup_shadow {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    pointer-events: none;
+}
+
+#result_clipboard_stage {
+    position: absolute;
+    left: 0px;
+    top: 1180px;
+    width: 1px;
+    height: 1px;
+    transform-origin: 50% 18%;
+    z-index: 100;
+}
+
+#result_clipboard_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 18%;
+    z-index: 100;
+}
+
+#result_overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+}
+
+.result_employee_value,
+.result_metric_value,
+#result_total_value,
+#result_grade_letter {
+    position: absolute;
+    white-space: nowrap;
+}
+
+.result_employee_value {
+    width: 230px;
+    height: 26px;
+
+    font-family: YoonGothic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+    color: #111111;
+}
+
+.result_metric_value {
+    width: 190px;
+    height: 28px;
+
+    font-family: YoonGothic;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: left;
+    color: #111111;
+}
+
+#result_total_value {
+    width: 250px;
+    height: 88px;
+    color: #000000;
+
+    font-family: Arial Black;
+    font-weight: 900;
+    font-size: 76px;
+    line-height: 88px;
+    text-align: center;
+}
+
+#result_grade_letter {
+    width: 150px;
+    height: 150px;
+    color: #000000;
+
+    font-family: Arial Black;
+    font-weight: 900;
+    font-size: 116px;
+    line-height: 150px;
+    text-align: center;
+    opacity: 0;
+}
+
+#result_stamp_device {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: 180;
+}
+
+#result_grade_stamp_wrap {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    transform-origin: 50% 50%;
+    z-index: 160;
+}
+
+.result_grade_stamp_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 커서 스프라이트 — 크기를 바꾸면 ResultUIController.lua의 CURSOR_SIZE도 같이 맞출 것
+   (중앙 핫스팟 계산용). MainMenu 커서와 동일 크기. */
+.result_cursor_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* =========================================================
+   Hint Text
+   단일 element에 글자 색과 outline을 같이 적용한다.
+   Lua에서는 이 element 하나의 opacity만 조정한다.
+   ========================================================= */
+
+#result_input_hint {
+    position: absolute;
+    right: 48px;
+    bottom: 32px;
+    width: 240px;
+    height: 72px;
+
+    font-size: 80px;
+
+    line-height: 56px;
+    letter-spacing: 1.5px;
+    text-align: right;
+    vertical-align: middle;
+    color: #ffffff;
+    font-effect: outline(5px #000000);
+    opacity: 0;
+    z-index: 1000;
+}
+
+/* =========================================================
+   Action Buttons (Retry / 타이틀로 돌아가기)
+   연출이 끝난 뒤 Lua에서 display: block으로 표시한다.
+   ========================================================= */
+
+#result_action_buttons {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 500;
+}
+
+#result_action_dim {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+}
+
+.result_action_button {
+    position: absolute;
+    left: 50%;
+    margin-left: -220px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    transform-origin: center center;
+    z-index: 10;
+}
+
+#result_btn_retry {
+    top: 43%;
+}
+
+#result_btn_title {
+    top: 57%;
+}
+
+.result_action_button:hover {
+    transform: scale(1.06);
+}
+
+.result_action_button:active {
+    transform: scale(0.98);
+}
+
+.result_action_button_img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+}
+
+/* #result_root img { display: block } 보다 높은 특이성(1,1,0 > 1,0,1)으로 override */
+#result_action_buttons .result_action_btn_hover {
+    display: none;
+}
+
+#result_action_buttons .result_action_button:hover .result_action_btn_default {
+    display: none;
+}
+
+#result_action_buttons .result_action_button:hover .result_action_btn_hover {
+    display: block;
+}
+
+.result_action_button_label {
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 100%;
+    height: 52px;
+
+    pointer-events: none;
+}
+
+#result_debug_panel {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 520px;
+    height: 840px;
+    padding: 20px;
+    background-color: #10181eea;
+    border-width: 2px;
+    border-color: #9fc7da;
+    border-radius: 16px;
+    color: #eff7fb;
+    display: none;
+    z-index: 2000;
+}
+
+#result_debug_title {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 8px;
+
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+#result_debug_subtitle {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 22px;
+    color: #c6dce8;
+}
+
+.result_debug_row {
+    position: relative;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 8px;
+}
+
+.result_debug_label {
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #dfeef6;
+}
+
+.result_debug_input {
+    position: absolute;
+    left: 126px;
+    top: 0px;
+    width: 250px;
+    height: 44px;
+    padding: 4px 10px;
+    background-color: #1a2a34;
+    border-width: 2px;
+    border-color: #6e9bb0;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 19px;
+}
+
+.result_debug_button,
+.result_debug_action_button {
+    padding: 0px;
+    background-color: #31586d;
+    border-width: 2px;
+    border-color: #a9d6ea;
+    border-radius: 8px;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.result_debug_button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 116px;
+    height: 44px;
+}
+
+.result_debug_button:hover,
+.result_debug_action_button:hover {
+    background-color: #41748d;
+}
+
+#result_debug_actions {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    height: 48px;
+}
+
+.result_debug_action_button {
+    position: absolute;
+    top: 0px;
+    width: 148px;
+    height: 48px;
+}
+
+#debug_result_replay {
+    left: 0px;
+}
+
+#debug_result_reset_layout {
+    left: 166px;
+}
+
+#debug_result_dump_layout {
+    right: 0px;
+}

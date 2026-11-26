@@ -1,0 +1,264 @@
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#menu_root {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#scene_bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+#menu_content {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+}
+
+#menu_background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#menu_background_blur {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%; 
+    z-index: 1;
+    opacity: 0;
+}
+
+#menu_header {
+    position: absolute;
+    left: 48px;
+    top: 28px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+
+#title_overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 200;
+}
+
+#menu_fade_overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 300;
+}
+
+#title_background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#press_any_button {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    width: 100%;
+    margin-left: -50%;
+}
+
+.menu_button {
+    position: absolute;
+    width: 17%;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    z-index: 5;
+    transform-origin: center center;
+}
+
+.menu_button:hover {
+    transform: scale(1.2);
+    z-index: 30;
+}
+
+.menu_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    pointer-events: none;
+}
+
+.menu_hover {
+    display: none;
+}
+
+.menu_button:hover .menu_default {
+    display: none;
+}
+
+.menu_button:hover .menu_hover {
+    display: block;
+}
+
+#menu_help {
+    left: 20%;
+    top: 18%;
+}
+
+#menu_option {
+    right: 20%;
+    top: 18%;
+}
+
+#menu_play {
+    left: 50%;
+    top: 34%;
+    margin-left: -9.5%;
+}
+
+#menu_scoreboard {
+    left: 20%;
+    bottom: 16%;
+}
+
+#menu_credits {
+    right: 20%;
+    bottom: 16%;
+}
+
+.menu_label {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin-left: -220px;
+    z-index: 40;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu_label_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    pointer-events: none;
+}
+
+.menu_label_text {
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    width: 100%;
+    height: 52px;
+
+    pointer-events: none;
+}
+
+#menu_help:hover + #label_help {
+    opacity: 1;
+}
+
+#menu_option:hover + #label_option {
+    opacity: 1;
+}
+
+#menu_play:hover + #label_play {
+    opacity: 1;
+}
+
+#menu_scoreboard:hover + #label_scoreboard {
+    opacity: 1;
+}
+
+#menu_credits:hover + #label_credits {
+    opacity: 1;
+}
+
+#menu_back_to_title:hover + #label_back_to_title {
+    opacity: 1;
+}
+
+#menu_exit_game:hover + #label_exit_game {
+    opacity: 1;
+}
+
+#menu_back_to_title {
+    right: 14%;
+    bottom: 4%;
+}
+
+.corner_menu_button {
+    position: absolute;
+    width: 9%;
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+    z-index: 30;
+    transform-origin: center center;
+}
+
+.corner_menu_button:hover {
+    transform: scale(1.4);
+}
+
+#menu_exit_game {
+    right: 3%;
+    bottom: 4%;
+}
+
+/* 종료 버튼 플레이스홀더 이미지 — UI 작업자가 src(main_menu.rml)와 함께 교체 예정 */
+.corner_menu_button_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    pointer-events: none;
+}
+
+.cursor_image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    display: none;
+    z-index: 1000;
+    pointer-events: none;
+}

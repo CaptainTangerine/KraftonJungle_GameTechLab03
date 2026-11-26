@@ -154,5 +154,16 @@
     "archive_path": "week13",
     "contribution_commits": [],
     "checked_at": "2026-11-26"
+  },
+  {
+    "week": "week14",
+    "repository": "https://github.com/JHCard7872/Jungle_Week14_Team8",
+    "owner": "JHCard7872",
+    "visibility": "public",
+    "ref": "main@31ae8394e1f644fb3cafaf7278283774acf51ec6",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week14",
+    "contribution_commits": [],
+    "checked_at": "2026-11-26"
   }
 ]
