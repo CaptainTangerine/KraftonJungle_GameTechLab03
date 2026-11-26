@@ -124,12 +124,14 @@
   },
   {
     "week": "week11",
-    "repository": null,
-    "owner": null,
-    "visibility": null,
-    "ref": null,
+    "repository": "https://github.com/chodott/Jungle_Week11_Team7",
+    "owner": "chodott",
+    "visibility": "public",
+    "ref": "main@ed7d2e44a8dfe8a8fcd68b868d8e8f21f1a2bccf",
+    "archive_repository": "https://github.com/CaptainTangerine/KraftonJungle_GameTechLab03",
+    "archive_path": "week11",
     "contribution_commits": [],
-    "checked_at": null
+    "checked_at": "2026-11-26"
   },
   {
     "week": "week12",
