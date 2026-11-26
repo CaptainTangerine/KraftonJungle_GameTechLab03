@@ -2,7 +2,7 @@
 
 크래프톤 정글 Game Tech Lab 3기에서 진행한 프로젝트를 주차별로 정리하기 위한 아카이브입니다.
 
-현재 `week01`부터 `week12`까지의 프로젝트 기록을 정리했으며, `week13`까지 이어서 채울 수 있는 문서 구조를 준비했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여를 구분해 기록합니다.
+현재 `week01`부터 `week13`까지의 프로젝트 기록을 정리했습니다. 각 문서에는 프로젝트 원본, 팀 전체 작업, 개인 기여를 구분해 기록합니다.
 
 ## 주차별 목차
 
@@ -21,7 +21,7 @@
 | 10주차 | [week10](week10/README.md) | FBX Importer & Skeletal Mesh Preview | [코드](week10/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week10_Team4) |
 | 11주차 | [week11](week11/README.md) | Skeletal Animation & GPU Skinning | [코드](week11/Project) · [원본](https://github.com/chodott/Jungle_Week11_Team7) |
 | 12주차 | [week12](week12/README.md) | Particle System & HDR Bloom | [코드](week12/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week12_Team1) |
-| 13주차 | [week13](week13/README.md) | 작성 예정 | 작성 예정 |
+| 13주차 | [week13](week13/README.md) | PhysX & NvCloth | [코드](week13/Project) · [원본](https://github.com/CaptainTangerine/Jungle_Week13_Team4) |
 
 ## 기록 원칙
 

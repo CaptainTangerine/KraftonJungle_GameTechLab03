@@ -1,0 +1,13 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "Origin" : "Editor",
+  "PathFileName" : "Content/Material/Editor/SpotLight.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/UI/Billboard.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Editor/Icons/S_SpotLight_256x.png"
+  },
+  "TranslucencyPass": "AfterDOF",
+}

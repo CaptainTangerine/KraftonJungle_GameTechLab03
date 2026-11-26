@@ -1,0 +1,13 @@
+{
+  "BlendState" : "",
+  "DepthStencilState" : "",
+  "Origin" : "Editor",
+  "PathFileName" : "Content/Material/Editor/PointLight.mat",
+  "RasterizerState" : "",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/UI/Billboard.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Editor/Icons/S_PointLight_256x.png"
+  },
+  "TranslucencyPass": "AfterDOF",
+}

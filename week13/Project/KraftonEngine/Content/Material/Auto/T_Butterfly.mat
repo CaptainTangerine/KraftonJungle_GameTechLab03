@@ -1,0 +1,13 @@
+{
+  "BlendState" : "AlphaBlend",
+  "DepthStencilState" : "",
+  "Origin" : "Manual",
+  "PathFileName" : "Content/Particle/T_Butterfly.mat",
+  "RasterizerState" : "SolidNoCull",
+  "RenderPass" : "AlphaBlend",
+  "ShaderPath" : "Shaders/UI/Billboard.hlsl",
+  "Textures" : {
+    "DiffuseTexture" : "Content/Particle/T_Butterfly.PNG"
+  },
+  "TranslucencyPass" : "AfterDOF"
+}
