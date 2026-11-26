@@ -4,6 +4,8 @@
 
 ![5만 개 오브젝트가 배치된 성능 측정 장면](Project/Docs/Screenshot.png)
 
+[← 전체 주차 보기](../README.md)
+
 ## 프로젝트 정보
 
 - 프로젝트명: Performance Engine — Picking Optimization Contest
